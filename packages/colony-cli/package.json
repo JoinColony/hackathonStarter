@@ -1,6 +1,6 @@
 {
   "name": "@colony/colony-cli",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "A command line tool for building with Colony",
   "license": "MIT",
   "publishConfig": {
@@ -14,6 +14,7 @@
     "postinstall": "sh scripts/postinstall.sh"
   },
   "dependencies": {
+    "@colony/colony-js-client": "^1.11.2",
     "@colony/purser-software": "^1.2.4",
     "chalk": "^2.4.1",
     "commander": "^2.17.1",

@@ -3,6 +3,7 @@
 // It will make the Colony Network more human usable with functionality for
 // non-consensus-relevant contexts by enriching the data stored on chain with
 // metadata (which might be too expensive to store on chain).
+
 // It helps developers building on the Colony Network provide a web 2.0 like
 // user experience, without compromising decentralisation.
 
@@ -12,7 +13,10 @@ const { Buffer } = require('buffer');
 let node;
 
 const waitForIPFS = () => {
-  node = new IPFS({ start: false });
+  node = new IPFS({
+    start: false,
+    repo: './tmp/ipfs/data',
+  });
   return new Promise((resolve, reject) => {
     node.on('ready', () => resolve(true));
     node.on('error', err => reject(err));
