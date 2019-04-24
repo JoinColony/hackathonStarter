@@ -1,6 +1,6 @@
 {
   "name": "@colony/colony-cli",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.4",
   "description": "A command line tool for building with Colony",
   "license": "MIT",
   "publishConfig": {
@@ -9,9 +9,6 @@
   "bin": {
     "colony": "src/index.js",
     "trufflepig": "node_modules/.bin/trufflepig"
-  },
-  "scripts": {
-    "postinstall": "sh scripts/postinstall.sh"
   },
   "dependencies": {
     "@colony/colony-js-client": "^1.11.2",

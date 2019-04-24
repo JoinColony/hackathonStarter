@@ -55,7 +55,7 @@ cd colony-starter
 
 ### Using NPX
 
-Alternatively, you can use [npx](https://www.npmjs.com/package/npx) and unpack the [colony-starter](/packages/colony-starter) package without installing the [colony-cli](/packages/colony-cli) package:
+Alternatively, you can use [npx](https://www.npmjs.com/package/npx) and unpack the [colony-starter](/packages/colony-starter) package without installing the [colony-cli](/packages/colony-cli) package.
 
 ```
 npx -p @colony/colony-cli colony build colony-starter
@@ -82,6 +82,10 @@ Check out some of the other starter packages by repeating steps 2 and 3 and subs
 [colony-starter-angular](/packages/colony-starter-angular)
 
 - A boilerplate using [colonyJS](https://github.com/JoinColony/colonyJS) with Angular.
+
+[colony-starter-contract](/packages/colony-starter-contract)
+
+- A boilerplate to start building extension contracts alongside [colonyNetwork](https://github.com/JoinColony/colonyNetwork).
 
 ### Example Packages
 

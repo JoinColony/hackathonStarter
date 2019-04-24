@@ -1,8 +1,6 @@
-# colony-example-react
+# colony-starter-contract
 
-_An example project using [colonyJS](https://github.com/JoinColony/colonyJS)!_
-
-This is a built out version of the [colony-starter-react](/starters-colony-starter-react) package with more examples.
+_A boilerplate to start building extension contracts alongside [colonyNetwork](https://github.com/JoinColony/colonyNetwork)!_
 
 ## Prerequisites
 
@@ -29,7 +27,7 @@ yarn global add @colony/colony-cli
 Move to your working directory and unpack the [colony-starter](/packages/colony-starter) package:
 
 ```
-colony build colony-example-react
+colony build colony-starter-contract
 ```
 
 ### Step 3
@@ -37,20 +35,22 @@ colony build colony-example-react
 Move to your new project directory and follow the instructions below:
 
 ```
-cd colony-example-react
+cd colony-starter-contract
 ```
 
 ### Using NPX
 
-Alternatively, you can use [npx](https://www.npmjs.com/package/npx) and unpack the [colony-example-react](/packages/colony-example-react) package without installing the [colony-cli](/packages/colony-cli) package.
+Alternatively, you can use [npx](https://www.npmjs.com/package/npx) and unpack the [colony-starter-contract](/packages/colony-starter-contract) package without installing the [colony-cli](/packages/colony-cli) package.
+
+Build the colonyStarter package using `npx`:
 
 ```
-npx -p @colony/colony-cli colony build colony-example-react
+npx -p @colony/colony-cli colony build colony-starter-contract
 ```
 
 ## Development
 
-### Start Network
+### Start Ganache
 
 Open a new terminal window and start [Ganache](https://github.com/trufflesuite/ganache-cli):
 
@@ -74,34 +74,20 @@ Once the contracts have been deployed, start [TrufflePig](https://github.com/Joi
 yarn start-trufflepig
 ```
 
-### Seed Network
+### Colony Setup
 
-Open a new terminal window and run the seed network script:
-
-```
-yarn seed-network
-```
-
-### Start Server
-
-Once your colony has been set up, start the development server:
+Open a new terminal window and create a test colony:
 
 ```
-yarn start
+yarn colony-setup
 ```
 
-### Open Browser
+### Truffle Commands
 
-Open your browser and start building your app:
-
-[localhost:8080](http://localhost:8080)
-
-### Run Tests
-
-Open a new terminal window and run the example tests:
+Run `truffle` commands using [colony-cli](https://github.com/JoinColony/colonyStarter/tree/master/packages/colony-cli):
 
 ```
-yarn test
+yarn truffle [develop/compile/migrate/test]
 ```
 
 ## Contract Versions

@@ -42,7 +42,7 @@ cd colony-example-angular
 
 ### Using NPX
 
-Alternatively, you can use [npx](https://www.npmjs.com/package/npx) and unpack the [colony-example-angular](/packages/colony-example-angular) package without installing the [colony-cli](/packages/colony-cli) package:
+Alternatively, you can use [npx](https://www.npmjs.com/package/npx) and unpack the [colony-example-angular](/packages/colony-example-angular) package without installing the [colony-cli](/packages/colony-cli) package.
 
 ```
 npx -p @colony/colony-cli colony build colony-example-angular

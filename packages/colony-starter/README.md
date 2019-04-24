@@ -40,7 +40,7 @@ cd colony-starter
 
 ### Using NPX
 
-Alternatively, you can use [npx](https://www.npmjs.com/package/npx) and unpack the [colony-starter](/packages/colony-starter) package without installing the [colony-cli](/packages/colony-cli) package:
+Alternatively, you can use [npx](https://www.npmjs.com/package/npx) and unpack the [colony-starter](/packages/colony-starter) package without installing the [colony-cli](/packages/colony-cli) package.
 
 ```
 npx -p @colony/colony-cli colony build colony-starter
