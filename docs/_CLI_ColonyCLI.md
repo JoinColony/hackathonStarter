@@ -8,7 +8,7 @@ The `colony-cli` package is a command line tool for building [colonyStarter](htt
 
 ## Prerequisites
 
-- Node `>=10.12.0`
+- Node `>=10.13.0`
 - Yarn `>=1.12.0`
 - Docker `>=18.09.0`
 
@@ -52,6 +52,12 @@ Deploy the [colonyNetwork](https://github.com/JoinColony/colonyNetwork) smart co
 
 ```
 colony service deploy-contracts
+```
+
+Deploy a specific version of the [colonyNetwork](https://github.com/JoinColony/colonyNetwork) smart contracts:
+
+```
+colony service deploy-contracts --specific glider
 ```
 
 Serve truffle contract data with [TrufflePig](https://github.com/JoinColony/trufflepig):

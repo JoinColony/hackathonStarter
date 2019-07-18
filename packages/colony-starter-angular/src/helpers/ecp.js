@@ -8,18 +8,15 @@
 // user experience, without compromising decentralisation.
 
 const IPFS = require('ipfs');
-const IPFSRepo = require('ipfs-repo');
 
 const { Buffer } = IPFS;
 
-let node, repo;
+let node;
 
 const waitForIPFS = () => {
-  repo = new IPFSRepo('./tmp/ipfs/data');
-  repo.apiAddr.set('/ip4/127.0.0.1/api', () => {});
   node = new IPFS({
+    repo: `./tmp/ipfs/data-${new Date()}`,
     start: false,
-    repo,
   });
   return new Promise((resolve, reject) => {
     node.on('ready', () => resolve(true));
@@ -49,4 +46,13 @@ exports.getHash = async (hash) => {
   return obj;
 }
 
-exports.stop = () => node.stop();
+exports.stop = async () => {
+  try {
+    await node.stop();
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.warn('IPFS failed a clean stop', error.message);
+    // Reset ipfs node
+    node = undefined;
+  }
+}

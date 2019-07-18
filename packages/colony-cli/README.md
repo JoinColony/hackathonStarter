@@ -4,7 +4,7 @@ The [colony-cli](/packages/colony-cli) package is a command line tool for buildi
 
 ## Prerequisites
 
-- Node `>=10.12.0`
+- Node `>=10.13.0`
 - Yarn `>=1.12.0`
 - Docker `>=18.09.0`
 
@@ -53,7 +53,7 @@ colony service deploy-contracts
 Deploy a specific version of the [colonyNetwork](https://github.com/JoinColony/colonyNetwork) smart contracts:
 
 ```
-colony service deploy-contracts --specific goerli-rc.1
+colony service deploy-contracts --specific glider
 ```
 
 Serve truffle contract data with [TrufflePig](https://github.com/JoinColony/trufflepig):

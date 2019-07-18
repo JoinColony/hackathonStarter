@@ -116,21 +116,42 @@ const service = async (commander, serviceName) => {
 
   } else {
 
-    let version = fs.readFileSync(path.join(colonyNetworkPath, '.git/HEAD'));
-    version = version.toString().trim();
+    let commit = fs.readFileSync(path.join(colonyNetworkPath, '.git/HEAD'));
+    commit = commit.toString().trim();
 
-    if (version === 'b43238a4d14a0b6e31190045db25caafdb85da4c') {
+    if (commit === 'b43238a4d14a0b6e31190045db25caafdb85da4c') {
 
-      // Log version
+      // Log release
       console.log();
-      console.log(`  Using colonyNetwork version glider-rc.1`);
+      console.log(`  Using colonyNetwork glider-rc.1 release`);
+      console.log();
+
+    } else if (commit === '32c51c5cb43f565d64c93c2826a1589083ce92a0') {
+
+      // Log release
+      console.log();
+      console.log(`  Using colonyNetwork glider-rc.2 release`);
+      console.log();
+
+    } else if (commit === 'ccda3dd7f79b4803db3ae162b15ca98dd9c68129') {
+
+      // Log release
+      console.log();
+      console.log(`  Using colonyNetwork glider-rc.3 release`);
+      console.log();
+
+    } else if (commit === 'b77c7ae0ebcdb69a0fd1513bdaa75a6b4832cf35') {
+
+      // Log release
+      console.log();
+      console.log(`  Using colonyNetwork glider release`);
       console.log();
 
     } else {
 
-      // Log version
+      // Log commit
       console.log();
-      console.log(`  Using colonyNetwork version ${version}`);
+      console.log(`  Using colonyNetwork commit ${commit}`);
       console.log();
 
     }
@@ -240,7 +261,7 @@ const service = async (commander, serviceName) => {
 
     // Run truffle command
     cp.execSync(
-      `${colonyNetworkPath}/node_modules/.bin/truffle ${truffleArgs.join(' ')}`,
+      `${colonyNetworkPath}/node_modules/truffle/build/cli.bundled.js ${truffleArgs.join(' ')}`,
       {
         stdio: 'inherit',
       },
